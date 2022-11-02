@@ -1,9 +1,27 @@
 .wrapper {
     height: 100px;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: #741188;
-    padding: 10px;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    border-radius: 6px;
+    color: #fff;
+}
+.username {
+    user-select: none;
+}
+.btn-sigout {
+    color: #000;
+    border: #741188;
+    background-color: #fff;
+    min-width: 120px;
+    user-select: none;
+
+    &:hover {
+        background-color: #d8abe0;
+    }
 }
