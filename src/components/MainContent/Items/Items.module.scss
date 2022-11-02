@@ -21,7 +21,7 @@
     border-bottom: 2px solid #ccc;
     z-index: 1000;
     background-color: #b4a2ed;
-    min-width: 675px;
+    min-width: 450px;
 }
 .header-icon {
     height: 50px;
@@ -38,10 +38,21 @@
         cursor: pointer;
     }
 }
+.count-item {
+    position: absolute;
+    display: flex;
+    top: 23px;
+    right: 25px;
+    color: #2b82ac;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
 .main-container {
     position: relative;
     margin-top: 70px;
-    max-height: 550px;
+    max-height: 500px;
     width: 100%;
     overflow-y: auto;
 }
@@ -65,17 +76,19 @@
 }
 .content-title {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     border: 1px solid #b4a2ed;
     border-radius: 10px;
     height: 70px;
-    width: 120px;
+    width: 150px;
     margin-right: 20px;
     font-weight: bold;
     background-color: #333;
     color: #fff !important;
     word-break: break-all;
+    font-size: smaller;
+    padding: 0px 5px;
 }
 .text-description {
     max-width: 300px;

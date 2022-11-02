@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Items.module.scss';
 import { Text, Button, CheckboxField } from '@aws-amplify/ui-react';
+import { ThemeContext } from '~/components/DefaultLayout/DefaultLayout';
 
 const cx = classNames.bind(styles);
-function Item({ todo }) {
-    // Add/Remove checked item from list
-    const handleCheck = (event) => {};
 
+function Item({ todo }) {
+    const handleChange = useContext(ThemeContext);
     return (
         <div className={cx('container')}>
             <div className={cx('content')}>
                 <div className={cx('content-title')}>
-                    <Text className={cx('text')}>{todo.name}</Text>
+                    <span className={cx('text')}>{todo.name}</span>
                 </div>
                 <Text className={cx('text-description')}>
                     {todo.description}
@@ -25,7 +25,7 @@ function Item({ todo }) {
                     size="large"
                     className={cx('btn-checkbox')}
                     value={todo.id}
-                    onClick={(event) => handleCheck(event)}
+                    onClick={(e) => handleChange(e)}
                 />
             </div>
         </div>
